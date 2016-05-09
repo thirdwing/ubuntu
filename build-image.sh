@@ -31,6 +31,8 @@ mount -o bind /proc $chroot_dir/proc
 chroot $chroot_dir apt-get update
 chroot $chroot_dir apt-get -y upgrade
 chroot $chroot_dir apt-get -y install ubuntu-minimal
+chroot $chroot_dir apt-get -y install wget
+chroot $chroot_dir apt-get -y install software-properties-common
 
 ### cleanup
 chroot $chroot_dir apt-get autoclean
